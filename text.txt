@@ -1,0 +1,5 @@
+# def random_number():
+#   num=''.join(random.choice(string.digits) for x in range(6))
+#   if Booking.objects.filter(reference_no=num).exists:
+#     num=random_number()
+#   return num
