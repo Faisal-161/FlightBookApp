@@ -41,6 +41,7 @@ class Flight(models.Model):
   max_passengers = models.IntegerField()
   price=models.IntegerField()
   
+  @property
   def hourdiff(self):
     h1= self.arrival_datetime.hour
     m1= self.arrival_datetime.minute
