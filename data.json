@@ -1,0 +1,552 @@
+[
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 3, 
+    "fields": {
+      "name": "TEXAS", 
+      "country": "US", 
+      "airport_code": "TXS"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 4, 
+    "fields": {
+      "name": "ATHENS", 
+      "country": "GREECE", 
+      "airport_code": "ATH"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 5, 
+    "fields":{
+      "name":"EAGLE USA",
+      "country":"USA (ALASKA)",
+      "airport_code":"EAA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 6, 
+    "fields":{
+      "name":"EAGLE RIVER ",
+      "country":"USA(WI)",
+      "airport_code":"EGV"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 7, 
+    "fields":{
+      "name":"EARLTON",
+      "country":"CANADA (ONTARIO)",
+      "airport_code":"YXR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 8, 
+    "fields":{
+      "name":"EAST HAMPTON",
+      "country":"USA (NEW YORK)",
+      "airport_code":"HTO"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk":9 , 
+    "fields":{
+      "name":"ECRAN ",
+      "country":"CYPRUS",
+      "airport_code":"ECN"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk":10 , 
+    "fields":{
+      "name":"EDNA BAY ",
+      "country":"USA (ALASKA)",
+      "airport_code":"EDA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 11, 
+    "fields":{
+      "name":"EASTMAIN ",
+      "country":"CANADA (QUEBEC)",
+      "airport_code":"ZEM"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 12, 
+    "fields":{
+      "name":"EGEDESMINDE",
+      "country":"GREENLAND (DENMARK) ",
+      "airport_code":"EGX"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 13, 
+    "fields":{
+      "name":"EKUK",
+      "country":"USA(ALASKA)",
+      "airport_code":"KKU"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 14, 
+    "fields":{
+      "name":"EGILSSTADIR ",
+      "country":"ICELAND",
+      "airport_code":"EGS"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 15, 
+    "fields":{
+      "name":"EDMONTON INTERNATIONAL",
+      "country":"CANADA(ALBERTA)",
+      "airport_code":"YEG"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 16, 
+    "fields":{
+      "name":"EDNA BAY",
+      "country":"USA(ALASKA)",
+      "airport_code":"EDA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 17, 
+    "fields":{
+      "name":"EL BOLSON",
+      "country":"ARGENTINA(N)",
+      "airport_code":"EHL"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 18, 
+    "fields":{
+      "name":"EL SALVADOR",
+      "country":"CHILE",
+      "airport_code":"ESR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 19, 
+    "fields":{
+      "name":"ENUGU",
+      "country":"NIGERIA",
+      "airport_code":"ENU"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 20, 
+    "fields":{
+      "name":"ABUJA",
+      "country":"NIGERIA",
+      "airport_code":"ABJ"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 21, 
+    "fields":{
+      "name":"AL-BAHA",
+      "country":"BAHAMAS",
+      "airport_code":"ABT"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 22, 
+    "fields":{
+      "name":"BAMAKO",
+      "country":"MALI",
+      "airport_code":"BKO"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 22, 
+    "fields":{
+      "name":"BANGUI",
+      "country":"CENTRAL AFRICAN REPUBLIC",
+      "airport_code":"BGF"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 23, 
+    "fields":{
+      "name":"BANJUL",
+      "country":"GAMBIA",
+      "airport_code":"BJL"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 24, 
+    "fields":{
+      "name":"BERLIN",
+      "country":"GERMANY",
+      "airport_code":"BER"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk":25 , 
+    "fields":{
+      "name":"CAIRO",
+      "country":"EGYPT",
+      "airport_code":"CAI"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 26, 
+    "fields":{
+      "name":"CAPETOWN",
+      "country":"SIERA LEONE",
+      "airport_code":"CPT"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 27, 
+    "fields":{
+      "name":"DENVER",
+      "country":"DENMARK",
+      "airport_code":"DEN"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 28, 
+    "fields":{
+      "name":"DELHI",
+      "country":"INDIA",
+      "airport_code":"DEL"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 29, 
+    "fields":{
+      "name":"FARGO",
+      "country":"FAR",
+      "airport_code":"FAR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 30, 
+    "fields":{
+      "name":"GRAND RAPID",
+      "country":"GRAND",
+      "airport_code":"GRR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 31, 
+    "fields":{
+      "name":"JAKARTA",
+      "country":"INDONESIA",
+      "airport_code":"JKT"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 32, 
+    "fields":{
+      "name":"KADUNA",
+      "country":"NIGERIA",
+      "airport_code":"KAD"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 33, 
+    "fields":{
+      "name":"LAGOS",
+      "country":"NIGERIA",
+      "airport_code":"LOS"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 34, 
+    "fields":{
+      "name":"MAPUTO",
+      "country":"MAPUTO",
+      "airport_code":"MPM"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 35, 
+    "fields":{
+      "name":"MANAGUA",
+      "country":"PARAMIBO",
+      "airport_code":"MGA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 36, 
+    "fields":{
+      "name":"LIBREVILLE",
+      "country":"GABON",
+      "airport_code":"LBV"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 37, 
+    "fields":{
+      "name":"MADRID",
+      "country":"SPAIN",
+      "airport_code":"MAD"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 38, 
+    "fields":{
+      "name":"MANCHESTER",
+      "country":"UK",
+      "airport_code":"MAN"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 39, 
+    "fields":{
+      "name":"MEDINA",
+      "country":"SAUDI ARABIA",
+      "airport_code":"MED"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 40, 
+    "fields":{
+      "name":"MEXICO CITY",
+      "country":"MEXICO",
+      "airport_code":"MEX"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 41, 
+    "fields":{
+      "name":"N'DJAMENA ",
+      "country":"CHAD",
+      "airport_code":"NDJ"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 42, 
+    "fields":{
+      "name":"NEWCASTLE",
+      "country":"NEWCASTLE",
+      "airport_code":"NCL"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 43, 
+    "fields":{
+      "name":"OKLAHOMA CITY",
+      "country":"OKLAHOMA",
+      "airport_code":"OKC"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 44, 
+    "fields":{
+      "name":"PARIS",
+      "country":"FRANCE",
+      "airport_code":"PAR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 45, 
+    "fields":{
+      "name":"RIO DE JANEIRO",
+      "country":"BRAZIL",
+      "airport_code":"RIO"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 46, 
+    "fields":{
+      "name":"HAVANNAH",
+      "country":"CUBA",
+      "airport_code":"HAV"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 47, 
+    "fields":{
+      "name":"WASHINGTON",
+      "country":"US",
+      "airport_code":"WAS"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 48, 
+    "fields":{
+      "name":"ZANZIBAR",
+      "country":"ZAZUU",
+      "airport_code":"ZBR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 49, 
+    "fields":{
+      "name":"WINDHEOK",
+      "country":"NAMIBIA",
+      "airport_code":"WDH"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 50, 
+    "fields":{
+      "name":"TRIPOLI",
+      "country":"LIBYA",
+      "airport_code":"TIP"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 51, 
+    "fields":{
+      "name":"SOKOTO",
+      "country":"NIGERIA",
+      "airport_code":"SKO"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 52, 
+    "fields":{
+      "name":"MORONI",
+      "country":"COMOROS",
+      "airport_code":"YVA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 53, 
+    "fields":{
+      "name":"DUBLIN",
+      "country":"DUBLIN",
+      "airport_code":"DUB"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 54, 
+    "fields":{
+      "name":"CONAKRY",
+      "country":"GUINEA",
+      "airport_code":"CKY"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 55, 
+    "fields":{
+      "name":"BUENOS AIRES",
+      "country":"ARGENTINA",
+      "airport_code":"BUE"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 56, 
+    "fields":{
+      "name":"BRAZZAVILLE",
+      "country":"CONGO",
+      "airport_code":"BZV"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 57, 
+    "fields":{
+      "name":"ATLANTIC CITY",
+      "country":"ATLANTA",
+      "airport_code":"AIY"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 1, 
+    "fields":{
+      "name":"MURITALA MUHAMMED AIRPORT",
+      "country":"NIGERIA",
+      "airport_code":"MMA"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 2, 
+    "fields":{
+      "name":"UNITED ARAB EMIRATES",
+      "country":"DUBAI",
+      "airport_code":"UAE"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 58, 
+    "fields":{
+      "name":"ERITREA",
+      "country":"ASMARA",
+      "airport_code":"ERR"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 59, 
+    "fields":{
+      "name":"TOKYO",
+      "country":"JAPAN",
+      "airport_code":"TKY"
+    }
+  },
+  {
+    "model": "bookflightapp.Airport", 
+    "pk": 60, 
+    "fields":{
+      "name":"BEIJIN",
+      "country":"CHINA",
+      "airport_code":"BEJ"
+    }
+  }
+
+]

@@ -1,4 +1,5 @@
 import random
+
 from django.db import models
 
 # Create your models here.
@@ -24,9 +25,14 @@ def random_string():
 
 
 class Airport(models.Model):
-  name=models.CharField(max_length=200,null=False)
-  country=models.CharField(max_length=200,null=False)
-  airport_code = models.CharField(max_length=3,null=False,blank=False)
+  name=models.CharField(max_length=200,null=True)
+  country=models.CharField(max_length=200,null=True)
+  airport_code = models.CharField(max_length=3,blank=False)
+
+  class Meta:
+    ordering=['name']
+    verbose_name_plural = 'Airports'
+
 
   def __str__(self):
     return self.name
@@ -40,6 +46,8 @@ class Flight(models.Model):
   arrival_datetime= models.DateTimeField()
   max_passengers = models.IntegerField()
   price=models.IntegerField()
+
+ 
   
   @property
   def hourdiff(self):
@@ -50,10 +58,10 @@ class Flight(models.Model):
 
     diff= difference(h1,m1,h2,m2)
   
-    return f"Hour difference is {diff} hours"
+    return f"{diff} hours"
 
   def __str__(self):
-    return self.aeroplane
+    return f"{self.departure.country} to {self.destination.country}"
 
 class Booking(models.Model):
   reference_no = models.CharField(max_length=6,default=random_string,unique=True,editable=False,primary_key=True)
@@ -62,7 +70,6 @@ class Booking(models.Model):
   flight=models.ForeignKey(Flight,on_delete=models.CASCADE)
   booking_datetime=models.DateTimeField(auto_now_add=True)
 
-    
 
   def __str__(self):
-    return self.flight
+    return self.passenger_last_name
