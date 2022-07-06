@@ -1,47 +1,51 @@
 {%extends 'bookflightapp/base.html'%}
 {%load static%}
-{%block title%}Search{%endblock title%}
+{%block title%}Date Search{%endblock title%}
 {%block content%}
-  <div class="container-sm">
-    <h1>Search for Flights</h1>
-  </div> <br>
-  <form action="{%url 'date-search' %}">
-    <div class="container-sm">
+  <div class="container">
+    <div>
+      <h3>Search by Date</h3>
+    </div> <br>
+    <form action="{%url 'date-search' %}">
+      <div class="container-sm">
 
-      <div class="row">
-        <div class="mb-2 col">
-          <div class="h-100 card">
-            <div class="card-body">
-              <h5 class="card-title">Dates</h5>
-              <div id="departure-date" class="mb-2">
-                <label
-                  id="departure-date-label"
-                  for="departure-date-input"
-                  class="form-label"
-                  >Departure date</label
-                >
-      
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class='bx bx-calendar bx-burst'></i></span>
-                  <input type="date"  name="username" required class="form-control"/>
+        <div class="row">
+          <div class="mb-2 col">
+            <div class="h-100 card">
+              <div class="card-body">
+                <h5 class="card-title">Dates</h5>
+                <div id="departure-date" class="mb-2">
+                  <label
+                    id="departure-date-label"
+                    for="departure-date-input"
+                    class="form-label"
+                    >Departure date</label
+                  >
+        
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class='bx bx-calendar bx-burst'></i></span>
+                    <input type="date"  name="username" required class="form-control"/>
+                  </div>
+                  
                 </div>
-                
-              </div>
-              <div id="return-date" class="mb-2">
-                <label>Arrival date</label>
-              <div class="input-group">
-                <span class="input-group-text">
-                  <i class='bx bxs-calendar'></i>
-                </span>
-                <input type="date" class="form-control" name="arrival-date">
+                <div id="return-date" class="mb-2">
+                  <label>Arrival date</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class='bx bxs-calendar'></i>
+                  </span>
+                  <input type="date" class="form-control" name="arrival-date">
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <button id="search-button" class="w-100 btn btn-primary">Search</button>
       </div>
-      <button id="search-button" class="w-100 btn btn-primary">Search</button>
-    </div>
-  </form>
+    </form>
+    <a href="{% url 'name-search' %}" class="w-100 btn btn-link">Search by Name</a>
+    <br>
+  </div>
   <br>
   <div class="row">
     <div class="col-sm">
@@ -69,7 +73,7 @@
               <td>{{details.arrival_datetime}}</td>
               <td>{{details.hourdiff}}</td>
               <td><a class="btn btn-sm btn-primary" href="{% url 'Book_form' %}">Book Flight</a></td>
-              <!-- <td><a class="btn btn-sm btn-danger" href="#">Remove</a></td> -->
+      
             </tr>
 
           {% endfor %}

@@ -2,121 +2,133 @@
 {%load static%}
 {%block title%}Search{%endblock title%}
 {%block content%}
-  <div class="container-sm">
-    <h1>Search for Flights</h1>
-  </div> <br>
-  <form action="{%url 'name-search' %}">
-    <div class="container-sm">
-      <div class="my-2 card">
-        <div class="card-body">
-          <h5 class="card-title">Locations</h5>
-          <div class="row">
-            <div class="col-sm">
-              <div class="mb-2">
-                <label id="origin-label" for="origin-input" class="form-label"
-                  >Departure Country</label
-                >
-                <div class="input-group">
-                  <span class="input-group-text"
-                  ><i class="bi-pin-map"></i>
-                  </span>
-                  <select class="custom-select"  name="departure">
-                    <option>COUNTRY(ALL)</option>
-                    {% for key,value in country_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                  </select>
+
+  <div class="container">
+    <div>
+      <h3>Search by Name</h3>
+    </div> <br>
+    <form action="{%url 'name-search' %}">
+      <div class="container-sm">
+        <div class="my-2 card">
+          <div class="card-body">
+            <h5 class="card-title">Locations</h5>
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-2">
+                  <label id="origin-label" for="origin-input" class="form-label"
+                    >Departure Country</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                    ><i class="bi-pin-map"></i>
+                    </span>
+                    <select class="custom-select"  name="departure">
+                      <option>COUNTRY(ALL)</option>
+                      {% for key,value in country_choices.items %}
+                        <option value="{{ key }}">{{ value }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm">
-              <div class="mb-2">
-                <label
-                  id="destination-label"
-                  for="destination-input"
-                  class="form-label"
-                  >Destination Country</label
-                >
-                <div class="input-group">
-                  <span class="input-group-text"
-                   ><i class="bi-pin-map-fill"></i>
-                  </span>
-                  <select class="custom-select"  name="destination">
-                    <option selected="selected" disabled="disabled">COUNTRY(ALL)</option>
-                    {% for key,value in country_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                  </select>
-              
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="mb-2 col">
-          <div class="h-100 card">
-            <div class="card-body">
-              <h5 class="card-title">Dates</h5>
-              <div id="departure-date" class="mb-2">
-                <label
-                  id="departure-date-label"
-                  for="departure-date-input"
-                  class="form-label"
-                  >Departure date</label
-                >
-      
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><i class='bx bx-calendar bx-burst'></i></span>
-                  <input type="date"  name="username" required class="form-control" disabled/>
-                </div>
+              <div class="col-sm">
+                <div class="mb-2">
+                  <label
+                    id="destination-label"
+                    for="destination-input"
+                    class="form-label"
+                    >Destination Country</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                    ><i class="bi-pin-map-fill"></i>
+                    </span>
+                    <select class="custom-select"  name="destination">
+                      <option selected="selected" disabled="disabled">COUNTRY(ALL)</option>
+                      {% for key,value in country_choices.items %}
+                        <option value="{{ key }}">{{ value }}</option>
+                      {% endfor %}
+                    </select>
                 
-              </div>
-              <div id="return-date" class="mb-2">
-                <label>Arrival date</label>
-              <div class="input-group">
-                <span class="input-group-text">
-                  <i class='bx bxs-calendar'></i>
-                </span>
-                <input type="date" class="form-control" name="arrival-date" disabled>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="mb-2 col">
+            <div class="h-100 card">
+              <div class="card-body">
+                <h5 class="card-title">Dates</h5>
+                <div id="departure-date" class="mb-2">
+                  <label
+                    id="departure-date-label"
+                    for="departure-date-input"
+                    class="form-label"
+                    >Departure date</label
+                  >
+        
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class='bx bx-calendar bx-burst'></i></span>
+                    <input type="date"  name="username" required class="form-control" disabled/>
+                  </div>
+                  
+                </div>
+                <div id="return-date" class="mb-2">
+                  <label>Arrival date</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class='bx bxs-calendar'></i>
+                  </span>
+                  <input type="date" class="form-control" name="arrival-date" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="search-button" class="w-100 btn btn-primary" type="submit">Search</button>
+      
+
       </div>
-      <button id="search-button" class="w-100 btn btn-primary">Search</button>
-    </div>
-  </form>
-  <br>
+    </form>
+    <a href="{% url 'date-search' %}" class="w-100 btn btn-link">Search by Date</a>
+    <br>
+  </div>
   <div class="row">
     <div class="col-sm">
       <div class="card card-body">
         <table class="table table-sm">
-          <tr>
-            <th>Aeroplane</th>
-            <th>Departure</th>
-            <th>Destination</th>
-            <th>Price</th>
-            <th>Departure Time</th>
-            <th>Arrival Time</th>
-            <th>Hours Taken</th>
-            <th>Book Flight</th>
-          </tr>
-          {% for details in flight %}
+          <thead class="thead-dark">
             <tr>
-              <td><a class="btn btn-sm btn-success"
-                href="{% url 'bookdetails' details.id %}">{{details.aeroplane}}</a>
-              </td>
-              <td>{{details.departure.name}}</td>
-              <td>{{details.destination.name}}</td>
-              <td>{{details.price}}</td>
-              <td>{{details.departure_datetime}}</td>
-              <td>{{details.arrival_datetime}}</td>
-              <td>{{details.hourdiff}}</td>
-              <td><a class="btn btn-sm btn-primary" href="{% url 'Book_form' %}">Book Flight</a></td>
-              <!-- <td><a class="btn btn-sm btn-danger" href="#">Remove</a></td> -->
+              <th scope="col">Aeroplane</th>
+              <th scope="col">Departure</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Price</th>
+              <th scope="col">Departure Time</th>
+              <th scope="col">Arrival Time</th>
+              <th scope="col">Hours Taken</th>
+              <th scope="col">Book Flight</th>
             </tr>
+          </thead>
+     
+          {% for details in flight %}
+          
+            <tbody>
+              <tr>
+                <td><a class="btn btn-sm btn-success"
+                  href="{% url 'bookdetails' details.id %}">{{details.aeroplane}}</a>
+                </td>
+                <td>{{details.departure.name}}</td>
+                <td>{{details.destination.name}}</td>
+                <td>{{details.price}}</td>
+                <td>{{details.departure_datetime}}</td>
+                <td>{{details.arrival_datetime}}</td>
+                <td>{{details.hourdiff}}</td>
+                <td><a class="btn btn-sm btn-primary" href="{% url 'Book_form' %}">Book Flight</a></td>
+              </tr>
+            </tbody>
+          
 
           {% endfor %}
         </table>

@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{% static 'bookflightapp/createflightstyle.css' %}">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>Create Flight</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Flight Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Aeroplane</label>
+                            <input type="text" placeholder="Airplane" required class="form-control">
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Departure</label>
+                            <select required>
+                                <option disabled selected>Select Departure Country</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Destination</label>
+                            <select required>
+                                <option disabled selected>Select Destination Country</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Departure date</label>
+                            <input type="date" placeholder="Enter Departure date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Arrival date</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Max Passengers</label>
+                            <input type="number" placeholder="Max Passengers"  class="form-control" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Price</label>
+                            <input type="number" placeholder="Enter price"  class="form-control" required>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </form>
+    </div>
+
+    <script src="regjs.js"></script>
+</body>
+</html>

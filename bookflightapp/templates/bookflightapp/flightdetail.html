@@ -1,0 +1,49 @@
+{%extends 'bookflightapp/base.html'%}
+{%load static%}
+{%block title%}Search{%endblock title%}
+{%block content%}
+
+<div class="row">
+    <div class="col-md">
+      <div class="card card-body">
+        <h5>Flight from {{item.departure}} to {{item.destination}}</h5>
+        <hr>
+        <a class="btn btn-primary" style="text-align: center;padding: 10px" href="{%url 'index' %}">Hompage</a>
+    
+      </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card card-body">
+        <h5>Total Amount Spent For This Flight</h5>
+        <hr>
+        <h1 style="text-align: center;padding: 10px" class="btn btn btn-success">${{total_price}}</h1>
+        </div>
+    </div>
+</div>
+  
+<div class="container">
+    <div class="jumbotron">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Reference Number</th>
+            <th scope="col">Passenger Firstname</th>
+            <th scope="col">Passenger Lastname</th>
+          </tr>
+        </thead>
+        {%for flight in all_flight%}
+  
+          <tbody>
+            <tr>
+                
+              <th scope="row">{{flight.reference_no}}</th>
+              <td>{{flight.passenger_first_name}}</td>
+              <td>{{flight.passenger_last_name}}</td>
+  
+  
+            </tr>
+            
+          </tbody>
+        {%endfor%}
+{%endblock content%}
