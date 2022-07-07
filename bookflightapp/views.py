@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth.forms import UserCreationForm
 from .forms import *
 from django.contrib import messages
 from .models import *
@@ -76,6 +77,7 @@ def search_by_date(request):
 
   return render(request,'bookflightapp/datesearch.html',context)
 
+@login_required(login_url='login')
 def book_flight(request):
   return render(request,'bookflightapp/createflight.html')
 
@@ -93,15 +95,15 @@ def signup(request):
 
         return redirect('login')
 
-    context={'form':form}
-    return render(request,'bookflightapp/signup.html',context)
+  context={'form':form}
+  return render(request,'bookflightapp/signup.html',context)
     
 
 def create_flight(request):
 
   return render(request,'bookflightapp/createflight.html')
 
-def login(request):
+def loginPage(request):
   if request.user.is_authenticated:
     return redirect('index')
   else:
@@ -116,7 +118,10 @@ def login(request):
       else:
         messages.info(request,"Username Or Password Is Incorrect")
 
-  return render(request,'bookflightapp/login.html')
+  context = {}
+    
+
+  return render(request,'bookflightapp/login.html',context)
 
 def flight_detail(request,pk):
   booking=Booking.objects.all()
@@ -139,5 +144,5 @@ def flight_detail(request,pk):
 
 def logoutUser(request):
   logout(request)
-  return redirect('index')
+  return redirect('login')
   
