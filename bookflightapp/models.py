@@ -4,21 +4,6 @@ from django.db import models
 
 # Create your models here.
 
-def difference(h1, m1, h2, m2):  
-  t1 = h1 * 60 + m1
-  t2 = h2 * 60 + m2
-
-  if (t1 == t2):
-    print("Both are same times")
-    return
-  else:
-    diff = t2-t1
-      
-  h = (int(diff / 60)) % 24
-  m = diff % 60
-
-  return f"{h}"
-
 
 def random_string():
   return str(random.randint(100000, 999999))
@@ -47,18 +32,12 @@ class Flight(models.Model):
   max_passengers = models.IntegerField()
   price=models.IntegerField()
 
- 
-  
-  @property
-  def hourdiff(self):
-    h1= self.arrival_datetime.hour
-    m1= self.arrival_datetime.minute
-    h2=self.departure_datetime.hour
-    m2=self.departure_datetime.minute
 
-    diff= difference(h1,m1,h2,m2)
-  
-    return f"{diff} hours"
+  @property
+  def duration(self):
+    duration_difference = self.arrival_datetime - self.departure_datetime 
+    hours = round(duration_difference.total_seconds()/3600)
+    return f"{hours} hours"
 
   def __str__(self):
     return f"{self.departure.country} to {self.destination.country}"

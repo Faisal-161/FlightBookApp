@@ -10,4 +10,5 @@ urlpatterns = [
   path('datesearch',views.search_by_date,name='date-search'),
   path("bookflight/",views.book_flight,name="book-flight"),
   path("flight/<str:pk>/",views.flight_detail,name="bookdetails"),
+  path("paypal/<int:id>/", views.flight_payment_id, name="payment"),
 ]

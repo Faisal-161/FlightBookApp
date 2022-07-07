@@ -25,7 +25,7 @@ def search_by_name(request):
     'flight':flight,
     'country_choices':country_choices
   }
-  
+
   #departure
   if 'departure' in request.GET:
     departure=request.GET['departure']
@@ -37,7 +37,7 @@ def search_by_name(request):
     destination=request.GET['destination']
     if destination:
       flight=Flight.objects.filter(destination__country__iexact=destination)
-  
+
   #departure-date
 
   context={
@@ -46,7 +46,7 @@ def search_by_name(request):
   }
 
   return render(request,'bookflightapp/namesearch.html',context)
-  
+
 def search_by_date(request):
 
   flight=Flight.objects.all().order_by("-departure_datetime").exclude(departure_datetime__lte="2020-3-3")
@@ -60,9 +60,9 @@ def search_by_date(request):
 
     departure_date=request.GET['departure-date']
 
-    if departure_date: 
+    if departure_date:
       flight=Flight.objects.filter(departure_datetime__gte=departure_date)
-  
+
   #arrival-date
   if 'arrival-date' in request.GET:
 
@@ -97,11 +97,8 @@ def signup(request):
 
   context={'form':form}
   return render(request,'bookflightapp/signup.html',context)
-    
 
-def create_flight(request):
 
-  return render(request,'bookflightapp/createflight.html')
 
 def loginPage(request):
   if request.user.is_authenticated:
@@ -119,7 +116,7 @@ def loginPage(request):
         messages.info(request,"Username Or Password Is Incorrect")
 
   context = {}
-    
+
 
   return render(request,'bookflightapp/login.html',context)
 
@@ -129,9 +126,10 @@ def flight_detail(request,pk):
   all_flights = Flight.objects.all()
 
   book_count=booking.count()
+  bookfilter_count = bookfilter.count()
   flight_price=Flight.objects.get(id=pk).price
 
-  total_price = flight_price * book_count
+  total_price = flight_price * bookfilter_count
 
   item=get_object_or_404(Flight,id=pk)
 
@@ -145,4 +143,15 @@ def flight_detail(request,pk):
 def logoutUser(request):
   logout(request)
   return redirect('login')
-  
+
+@login_required(login_url='login')
+def flight_payment_id(request, id):
+    detail = Flight.objects.get(id=id)
+    Great = Booking.objects.all()
+    Life = Great.filter(flight__id=id)
+    context = {
+      "paynow":detail,
+      "amazing":Life,
+    }
+
+    return render(request, "bookflightapp/flight_payment.html",context)

@@ -1,0 +1,68 @@
+{%extends 'bookflightapp/base.html'%}
+{%load static%}
+{% block content %}
+
+  <div class="row">
+    <div class="col-md">
+        <hr>
+        <a class="btn btn-primary" style="text-align: center;padding: 10px" href="{%url 'name-search' %}">Back</a>
+
+      </div>
+    </div>
+  <h1>Flight Payment</h1>
+  <br>
+  <br>
+  <div class="container">
+    <div id="paypal-button-container"></div>
+
+          <script src="https://www.paypal.com/sdk/js?client-id=AUxoghq8aTuSMWX4gS9bU57eqjaoLj1o7YMxIm3JsZjKiPFGq94cpV0HFIsyRggZDVbDLGVfqPJ-fcMd&currency=USD"></script>
+
+
+
+
+
+          <script>
+            var total = {{paynow.price}}
+
+            // Render the PayPal button into #paypal-button-container
+            paypal.Buttons({
+
+                 style: {
+                    color:  'blue',
+                    shape:  'rect',
+                    label:  'pay',
+                    height: 40
+                },
+
+                // Set up the transaction
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+
+                                value: total
+                            }
+                        }]
+                    });
+                },
+
+                // Finalize the transaction
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        // Show a success message to the buyer
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    });
+                }
+
+
+            }).render('#paypal-button-container');
+        </script>
+  </div>
+
+  <hr>
+
+
+
+
+
+{% endblock content %}
