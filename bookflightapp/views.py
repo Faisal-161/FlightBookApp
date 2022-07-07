@@ -77,7 +77,7 @@ def search_by_date(request):
   return render(request,'bookflightapp/datesearch.html',context)
 
 def book_flight(request):
-  pass
+  return render(request,'bookflightapp/createflight.html')
 
 def signup(request):
   if request.user.is_authenticated:
