@@ -1,0 +1,12 @@
+[
+    {
+      "model": "bookflightapp.Booking",  
+      "fields": {
+        "reference_no": "TEXAS", 
+        "passenger_first_name": "US", 
+        "passenger_last_name": "TXS",
+        "flight":"",
+        "booking_datetime":""
+      }
+    }
+]

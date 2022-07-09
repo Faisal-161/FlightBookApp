@@ -1,6 +1,6 @@
 {%extends 'bookflightapp/base.html'%}
 {%load static%}
-{%block title%}Search{%endblock title%}
+{%block title%}Name -search{%endblock title%}
 {%block content%}
 
   <div class="container">
@@ -125,7 +125,7 @@
                 <td>{{details.departure_datetime}}</td>
                 <td>{{details.arrival_datetime}}</td>
                 <td>{{details.duration}}</td>
-                <td><a class="btn btn-sm btn-primary" href="{% url 'book-flight' %}">Book Flight</a></td>
+                <td><a class="btn btn-sm btn-primary" href="{% url 'payment' details.id %}">Book Flight</a></td>
               </tr>
             </tbody>
           

@@ -1,6 +1,6 @@
 {%extends 'bookflightapp/base.html'%}
 {%load static%}
-{%block title%}Date Search{%endblock title%}
+{%block title%}Date -search{%endblock title%}
 {%block content%}
   <div class="container">
     <div>
@@ -24,7 +24,7 @@
         
                   <div class="input-group">
                     <span class="input-group-text" id="basic-addon1"><i class='bx bx-calendar bx-burst'></i></span>
-                    <input type="date"  name="username" required class="form-control"/>
+                    <input type="date"  name="departure-date" required class="form-control"/>
                   </div>
                   
                 </div>
@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <button id="search-button" class="w-100 btn btn-primary">Search</button>
+        <button type="submit" class="w-100 btn btn-primary">Search</button>
       </div>
     </form>
     <a href="{% url 'name-search' %}" class="w-100 btn btn-link">Search by Name</a>
@@ -72,7 +72,7 @@
               <td>{{details.departure_datetime}}</td>
               <td>{{details.arrival_datetime}}</td>
               <td>{{details.duration}}</td>
-              <td><a class="btn btn-sm btn-primary" href="{% url 'book-flight' %}">Book Flight</a></td>
+              <td><a class="btn btn-sm btn-primary" href="{% url 'payment' details.id %}">Book Flight</a></td>
       
             </tr>
 
